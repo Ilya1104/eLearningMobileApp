@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eLearning.SelectedPracticePage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="headerLabel" TargetType="Label">
+                <Setter Property="Margin" Value="0, 8" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="TextColor" Value="DeepSkyBlue" />
+                <Setter Property="FontFamily" Value="Comfortaa-Light.ttf#" />
+            </Style>
+            <Style TargetType="Image">
+                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="HeightRequest" Value="200"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="TextColor" Value="#FF4C50BE" />
+                <Setter Property="FontFamily" Value="Comfortaa-Light.ttf#" />
+            </Style>
+            <Style x:Key="descLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="TextColor" Value="DeepSkyBlue" />
+                <Setter Property="FontFamily" Value="Comfortaa-Light.ttf#" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView Padding="10" BackgroundColor="white" VerticalScrollBarVisibility="Never">
+            <StackLayout>
+                <Label Text="{Binding Name}" Style="{StaticResource headerLabel}" HorizontalOptions="Center"/>
+                <Label Text="{Binding Description}" Style="{StaticResource descLabel}"/>
+                <Label Text="&#x2023; Задание 1"/>
+                <Image x:Name="i1" Source="{Binding FirstImage}" />
+                <Label  Text="{Binding Task1}"/>
+                <Image x:Name="i2" Source="{Binding SecondImage}"/>
+                <Label Text="&#x2023; Задание 2"/>
+                <Image x:Name="i3" Source="{Binding ThirdImage}" />
+                <Label Text="{Binding Task2}"/>
+                <Image x:Name="i4" Source="{Binding FourthImage}"/>
+                <Label Text="&#x2023; Задание 3"/>
+                <Image x:Name="i5" Source="{Binding FifthImage}" />
+                <Label Text="{Binding Task3}"/>
+                <Image x:Name="i6" Source="{Binding SixthImage}"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

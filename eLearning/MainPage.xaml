@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eLearning.MainPage"
+             BackgroundColor="#0A0A0A">
+    <ContentPage.Resources>
+        <Style x:Key="headerLabel" TargetType="Label">
+            <Setter Property="Margin" Value="0, 8" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="TextColor" Value="DeepSkyBlue" />
+            <Setter Property="FontFamily" Value="Comfortaa-Light.ttf#" />
+        </Style>
+        <Style TargetType="Image">
+            <Setter Property="FlexLayout.Order" Value="-1" />
+        </Style>
+        <!-- <Style TargetType="Frame">
+            <Setter Property="FlexLayout.Order" Value="-1" />
+            <Setter Property="FlexLayout.AlignSelf" Value="Center" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="WidthRequest" Value="200" />
+            <Setter Property="BackgroundColor" Value="#495DC8" />
+            <Setter Property="FontFamily" Value="Comfortaa-Light.ttf#" />
+            <Setter Property="TextColor" Value="DeepSkyBlue" />
+        </Style>-->
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="Comfortaa-Light.ttf#" />
+        </Style>
+    </ContentPage.Resources>
+
+
+    <StackLayout WidthRequest="400" Orientation="Vertical" MinimumWidthRequest="400">
+        <StackLayout BackgroundColor="gray">
+            <Label Text="Перечень лекций" FontSize="25" VerticalOptions="CenterAndExpand" FontFamily="Comfortaa-Light.ttf#" HorizontalOptions="Center" TextColor="DeepSkyBlue" />
+        </StackLayout>
+        
+
+    <!--    <CarouselView x:Name="friendsList" ItemsSource="{Binding}" PeekAreaInsets="0">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame HasShadow="True"
+                               BorderColor="DarkGray"
+                               CornerRadius="5"
+                               Margin="20"
+                               HeightRequest="400"
+                               HorizontalOptions="Center"
+                               VerticalOptions="CenterAndExpand">
+                            <StackLayout>
+                                <Image Source="listImg.jpg" Aspect="Fill" HeightRequest="200" WidthRequest="300" HorizontalOptions="Center"/>
+                                <Label Text="{Binding Theme}" Style="{StaticResource headerLabel}" />
+                                <Label Text="{Binding Description}" TextColor="DeepSkyBlue"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>-->
+      <ListView x:Name="friendsList" ItemsSource="{Binding}" ItemSelected="OnItemSelected" RowHeight="365" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Margin="10" BackgroundColor="#FF262626" Orientation="Vertical">
+                                <StackLayout HeightRequest="240" MinimumHeightRequest="370">
+                                    <Image Source="{Binding Preview}" VerticalOptions="FillAndExpand"/><!--всё дело в ебучей картинке-->
+                                </StackLayout>
+                                <StackLayout Padding="3">
+                                    <Label Text="{Binding Theme}" FontSize="18" TextColor="DeepSkyBlue"/>
+                                    <Label Text="{Binding Description}" TextColor="darkgray"/>
+                                </StackLayout>                                
+                            </StackLayout>
+                         <!--    <FlexLayout Direction="Column">
+                                <Frame WidthRequest="300" HeightRequest="300" Margin="10" BackgroundColor="#495DC8">
+                                    <FlexLayout Direction="Column">
+                                        <Label Text="{Binding Theme}" Style="{StaticResource headerLabel}" />
+                                        <Label Text="{Binding Description}" TextColor="DeepSkyBlue"/>
+                                          <Label Text="  &#x2021; Doesn't make a lot of noise" />
+                                       <Label Text="  &#x2022; Often smiles mysteriously" />
+                                        <Label Text="  &#x2022; Sleeps sitting up" />
+                                        <Image Source="listImg.jpg" WidthRequest="300" HeightRequest="100" HorizontalOptions="Start" VerticalOptions="Start"/>
+                                    </FlexLayout>
+                                </Frame>
+                            </FlexLayout>-->
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView> 
+    </StackLayout>
+</ContentPage>

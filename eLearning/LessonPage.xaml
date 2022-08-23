@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eLearning.LessonPage"
+              xmlns:rox="clr-namespace:Rox;assembly=Rox.Xamarin.Video.Portable">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0, 20, 0, 0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="headerLabel" TargetType="Label">
+                <Setter Property="Margin" Value="0, 8" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="TextColor" Value="white" />
+                <Setter Property="FontFamily" Value="Comfortaa-Light.ttf#" />
+            </Style>
+            <Style TargetType="Image">
+                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="HeightRequest" Value="200"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="TextColor" Value="darkgray" />
+                <Setter Property="FontFamily" Value="Comfortaa-Light.ttf#" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>  
+    <!--CONTENT-->
+    <ContentPage.Content>
+        <ScrollView Padding="10" BackgroundColor="#0A0A0A" >
+            <StackLayout HorizontalOptions="Start">
+                <Label Text="{Binding Theme}" Style="{StaticResource headerLabel}" HorizontalOptions="Center"/>
+                <Label Text="{Binding Text1}" />
+                <Image x:Name="i1" Source="{Binding Image1}"/>
+                <Label Text="{Binding Text2}" />
+                <Image x:Name="i2" Source="{Binding Image2}"/>
+                <Label Text="{Binding Text3}" />
+                <Image x:Name="i3" Source="{Binding Image3}"/>
+                <Label Text="{Binding Text4}" />
+                <Image x:Name="i4" Source="{Binding Image4}"/>
+                <Label Text="{Binding Text5}" />
+
+                <WebView Margin="10" HorizontalOptions="Center" WidthRequest="300" HeightRequest="200" Source="{Binding Video}"/>
+            </StackLayout>
+
+
+
+
+            <!--    <StackLayout>
+                <ListView x:Name="pageLesson" ItemsSource="{Binding}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <AbsoluteLayout>
+                                <BoxView AbsoluteLayout.LayoutBounds="0, 10, 200, 3" />
+                                <BoxView AbsoluteLayout.LayoutBounds="0, 20, 200, 3" />
+                                <BoxView AbsoluteLayout.LayoutBounds="10, 0, 3, 65" />
+                                <BoxView AbsoluteLayout.LayoutBounds="20, 0, 3, 65" />
+                                <Label Text="{Binding Theme}" FontSize="24" AbsoluteLayout.LayoutBounds="30, 25, AutoSize, AutoSize"/>
+                                <StackLayout>
+                                    <Label Text="{Binding Text}"></Label>
+                                </StackLayout>
+                            </AbsoluteLayout>
+                           
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+              
+                
+                <StackLayout HorizontalOptions="Center" Padding="20">
+                    <Label Text="Underlined Text" FontSize="24" />
+                    <BoxView HeightRequest="2" />
+                </StackLayout>
+                <BoxView HeightRequest="3" />
+                <StackLayout Orientation="Horizontal">
+                    <BoxView WidthRequest="4" Margin="0, 0, 10, 0" />
+                    <Label Text="dvsssadasvasvadvasdav" FontSize="20"/>
+                </StackLayout>
+
+            </StackLayout>-->
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

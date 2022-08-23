@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eLearning.TabPage"
+            xmlns:pages="clr-namespace:eLearning" 
+            Shell.NavBarIsVisible="False"
+            Shell.BackgroundColor="gray">
+    <TabBar>
+
+        <ShellContent Title="Лекции"  Route="MainPage"
+                      Icon="bookIcon.png"
+                      ContentTemplate="{DataTemplate pages:MainPage}"/>
+        <ShellContent Title="Практика" Route="PracticePage"
+                      Icon="practiceIcon.png"
+                      ContentTemplate="{DataTemplate pages:PracticePage}"/>
+        <ShellContent Title="Тесты" Route="TestPage"
+                      Icon="testIcon.png"
+                      ContentTemplate="{DataTemplate pages:TestPage}"/>          
+    </TabBar>
+</Shell>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eLearning.RegistrationPage"
+             Title="О приложении">
+    <ContentPage.Resources>        
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="Comfortaa-Light.ttf#" />
+            <Setter Property="TextColor" Value="darkgray" />
+            <Setter Property="FontSize" Value="25" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#495DC8" />
+            <Setter Property="FontFamily" Value="Comfortaa-Light.ttf#" />
+            <Setter Property="TextColor" Value="DeepSkyBlue" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView  BackgroundColor="#0A0A0A" Orientation="Vertical" HorizontalScrollBarVisibility="Never">
+        <StackLayout Orientation="Vertical">
+            <StackLayout Margin="6">
+                <Label Text="   Данное приложение приложение выполнено в рамках дипломного проекта на тему &#34; Создание электронного учебника по графическому редактору Adobe Photoshop&#34;. Все события выдуманы, а совпадения случайны."/>
+                <Label Text="   Приложение &#34; eLearning &#34; предназначено для изучения основ данного графического редактора. Оно подойдёт как новичкам для получения новых знаний, так и профессионалам для восполнения профессиональных пробелов."/>
+                <Label Text="   Разработчик: Илья Геннадьевич Кужанов."/>
+                <Label Text="   При поддержке Учреждения образования &#34;Гомельский государственный аграрно - экономический колледж&#34;."/>
+            </StackLayout>
+            
+            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Image WidthRequest="200" HeightRequest="150" Source="copyright.png" HorizontalOptions="CenterAndExpand" />
+                <Label Text="All rights Reserved. Гомель, 2022" HorizontalOptions="Center"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

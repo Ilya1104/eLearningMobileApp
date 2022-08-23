@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eLearning.InitialPage">
+    <ContentPage.Resources>      
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#FF262626" />
+            <Setter Property="FontFamily" Value="Comfortaa-Light.ttf#" />
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="BorderWidth" Value="1" /><!---->
+        </Style>
+    </ContentPage.Resources>
+    <StackLayout BackgroundColor="#0A0A0A" Orientation="Vertical">
+        <Label Text="E-Learning application" VerticalOptions="Start" HorizontalOptions="Center" Padding="1" TextColor="white" FontSize="35">
+            <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                    <OnPlatform.iOS>ShadowsIntoLight-Regular.ttf#ShadowsIntoLight</OnPlatform.iOS>
+                    <OnPlatform.Android>ShadowsIntoLight-Regular.ttf#ShadowsIntoLight</OnPlatform.Android>
+                    <OnPlatform.WinPhone>ShadowsIntoLight-Regular.ttf#ShadowsIntoLight</OnPlatform.WinPhone>
+                </OnPlatform>
+            </Label.FontFamily>
+        </Label>
+        <StackLayout WidthRequest="250" HeightRequest="200">
+            <Image Source="psLogo.png"/>
+        </StackLayout>
+        <StackLayout  VerticalOptions="CenterAndExpand" HorizontalOptions="Center" WidthRequest="160" Spacing="15">
+            <Button Text="Начать" Clicked="ToAuthorizationPage">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Scale" Value="1"/>
+                                <Setter Property="CornerRadius" Value="10" />
+                                <Setter Property="BorderColor" Value="white" />
+                                <Setter Property="TextColor" Value="white" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Pressed">
+                            <VisualState.Setters>
+                                <Setter Property="Scale" Value="0.75"/>
+                                <Setter Property="CornerRadius" Value="15" />
+                                <Setter Property="BorderColor" Value="#10346B" />
+                                <Setter Property="TextColor" Value="#10346B" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </Button>
+            <Button Text="О приложении" Clicked="ToRegistrationPage">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Scale" Value="1"/>
+                                <Setter Property="CornerRadius" Value="10" />
+                                <Setter Property="BorderColor" Value="white" />
+                                <Setter Property="TextColor" Value="white" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Pressed">
+                            <VisualState.Setters>
+                                <Setter Property="Scale" Value="0.75"/>
+                                <Setter Property="CornerRadius" Value="15" />
+                                <Setter Property="BorderColor" Value="#10346B" />
+                                <Setter Property="TextColor" Value="#10346B" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </Button>
+            <Button Text="Выход" Clicked="QuitApp">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Scale" Value="1"/>
+                                <Setter Property="CornerRadius" Value="10" />
+                                <Setter Property="BorderColor" Value="white" />
+                                <Setter Property="TextColor" Value="white" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Pressed">
+                            <VisualState.Setters>
+                                <Setter Property="Scale" Value="0.75"/>
+                                <Setter Property="CornerRadius" Value="15" />
+                                <Setter Property="BorderColor" Value="#10346B" />
+                                <Setter Property="TextColor" Value="#10346B" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </Button>
+        </StackLayout>        
+    </StackLayout>
+</ContentPage>
